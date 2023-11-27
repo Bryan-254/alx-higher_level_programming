@@ -1,2 +1,2 @@
 #!/bin/bash
-python -m py_compile "$PYFILE" && mv "__pycache__/${PYFILE%.py}.pyc" .
+python3 -c "import py_compile; py_compile.compile('$PYFILE', '$PYFILE' + 'c')"
