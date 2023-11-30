@@ -18,6 +18,7 @@ def calculator(a, operator, b):
     print(f"{a} {operator} {b} = {result}")
 
 if __name__ == "__main__":
+    from sys import argv
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
