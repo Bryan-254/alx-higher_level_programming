@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    from calculator_1 import calculator
+    from calculator_1 import add, sub, mul, div
     a = 10
     b = 5
     sum_result = add(a, b)
