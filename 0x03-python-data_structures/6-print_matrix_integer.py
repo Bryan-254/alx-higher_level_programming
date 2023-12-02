@@ -2,8 +2,7 @@
 
 def print_matrix_integer(matrix=[[]]):
     if not matrix or not matrix[0]:
-        print("--")
-        return
+        print()
 
     row_count = len(matrix)
     col_count = len(matrix[0])
