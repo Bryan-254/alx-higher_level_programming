@@ -2,8 +2,7 @@
 
 def print_matrix_integer(matrix=[[]]):
     if not matrix or not matrix[0]:
-        print("Empty matrix")
-        return
+        print()
 
     row_count = len(matrix)
     col_count = len(matrix[0])
@@ -11,7 +10,8 @@ def print_matrix_integer(matrix=[[]]):
     for x in range(row_count):
         for y in range(col_count):
             if y == col_count - 1:
-                print("{:d}".format(matrix[x][y]), end="")
+                endspace = ' '
             else:
-                print("{:d} ".format(matrix[x][y]), end="")
+                endspace = ''
+            print("{:d}".format(matrix[x][y]), end=endspace)
         print()
