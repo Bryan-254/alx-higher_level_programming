@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-    if not matrix or not matrix[x]:
+    if not matrix:
         print()
 
     row_count = len(matrix)
