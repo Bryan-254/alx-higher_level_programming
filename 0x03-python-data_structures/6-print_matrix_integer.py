@@ -13,5 +13,5 @@ def print_matrix_integer(matrix=[[]]):
             if y == col_count - 1:
                 print("{:d}".format(matrix[x][y]), end="")
             else:
-                print("{:d} ".format(matrix[x][y]), end=" ")
+                print("{:d}".format(matrix[x][y]), end=" ")
         print()
