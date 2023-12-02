@@ -10,7 +10,7 @@ def replace_in_list(my_list, idx, element):
         return my_list
 
     # Replace the element at specified index in the list with the new value
-    my_list[idx] = new_value
+    my_list[idx] = element
 
     # returns the modified list
     return my_list
