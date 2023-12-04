@@ -4,25 +4,25 @@
 
 /**
  * is_palindrome_recursive - Check if given linked list is palindrome
- * @left: keep track of the current position in the linked list
- * @right: current position in the linked list as the recursion progresses
+ * @initial: keep track of the current position in the linked list
+ * @final: current position in the linked list as the recursion progresses
  * Return: 1 if a palindrome, 0 if not a palindrome
  */
 
-int is_palindrome_recursive(listint_t **left, listint_t *right) 
+int is_palindrome_recursive(listint_t **initial, listint_t *final) 
 {
 	int is_palindrome;
 
-	if (right == NULL)
+	if (final == NULL)
 	{
 		return 1;
 	}
 
-	is_palindrome = is_palindrome_recursive(left, right->next);
+	is_palindrome = is_palindrome_recursive(initial, final->next);
 
-	if (is_palindrome && ((*left)->n == right->n))
+	if (is_palindrome && ((*initial)->n == final->n))
 	{
-		*left = (*left)->next;
+		*initial = (*initial)->next;
 		return 1;
 	}
 
@@ -32,7 +32,6 @@ int is_palindrome_recursive(listint_t **left, listint_t *right)
 /**
  * is_palindrome - checks if linked list is a palindrome
  * @head: This is the head of the list
- *
  * Return: 1 if a palindrome, 0 if not a palindrome
  */
 
