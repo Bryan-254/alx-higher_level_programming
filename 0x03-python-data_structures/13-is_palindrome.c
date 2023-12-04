@@ -1,44 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+
 /**
- * palindrome_rec - Iterates through a list recursively
- * @head: head of the list
- * @tail: iterates to the end of the list
- *
+ * is_palindrome_recursive - Check if given linked list is palindrome
+ * @left: keep track of the current position in the linked list
+ * @right: current position in the linked list as the recursion progresses
  * Return: 1 if a palindrome, 0 if not a palindrome
  */
 
-int palindrome_rec(listint_t **head, listint_t *tail)
+int is_palindrome_recursive(listint_t **left, listint_t *right) 
 {
-	if (tail == NULL)
-		return (1);
+	int is_palindrome;
 
-	if (palindrome_rec(head, tail->next) == 1 && (*head)->n == tail->n)
+	if (right == NULL)
 	{
-		(*head) = (*head)->next;
-		return (1);
+		return 1;
 	}
 
-	else
-		return (0);
-}
+	is_palindrome = is_palindrome_recursive(left, right->next);
 
+	if (is_palindrome && ((*left)->n == right->n))
+	{
+		*left = (*left)->next;
+		return 1;
+	}
+
+	return 0;
+}
 
 /**
  * is_palindrome - checks if linked list is a palindrome
- * @head: head of the list
+ * @head: This is the head of the list
  *
  * Return: 1 if a palindrome, 0 if not a palindrome
  */
 
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL)
-		return (1);
-
-	if ((*head)->next == NULL)
-		return (1);
-
-	return (palindrome_rec(head, *head));
+	return is_palindrome_recursive(head, *head);
 }
