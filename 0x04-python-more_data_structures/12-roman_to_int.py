@@ -14,17 +14,17 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    result = 0
-    prev_value = 0
+    converted_interger = 0
+    previous_value = 0
 
     for numeral in reversed(roman_string):
         value = roman_numerals.get(numeral, 0)
 
-        if value < prev_value:
-            result -= value
+        if value < previous_value:
+            converted_integer -= value
         else:
-            result += value
+            converted_integer += value
 
-        prev_value = value
+        previous_value = value
 
-    return result
+    return converted_integer
