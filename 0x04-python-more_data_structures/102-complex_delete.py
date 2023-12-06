@@ -8,3 +8,4 @@ def complex_delete(a_dictionary, value):
     # Delete keys with the specified value
     for key in deletedKeysDict:
         del a_dictionary[key]
+    return (a_dictionary)
