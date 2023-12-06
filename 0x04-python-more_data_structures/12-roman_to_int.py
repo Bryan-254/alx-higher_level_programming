@@ -14,7 +14,7 @@ def roman_to_int(roman_string):
         'M': 1000
     }
 
-    converted_interger = 0
+    converted_integer = 0
     previous_value = 0
 
     for numeral in reversed(roman_string):
