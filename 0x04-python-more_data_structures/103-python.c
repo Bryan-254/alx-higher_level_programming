@@ -12,17 +12,17 @@ void print_python_bytes(PyObject *p);
 
 void print_python_list(PyObject *p)
 {
-	int size, alloc, x;
+	int size, alloca, x;
 	const char *type;
 	PyListObject *list = (PyListObject *)p;
 	PyVarObject *var = (PyVarObject *)p;
 
 	size = var->ob_size;
-	alloc = list->allocated;
+	alloca = list->allocated;
 
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %d\n", size);
-	printf("[*] Allocated = %d\n", alloc);
+	printf("[*] Allocated = %d\n", alloca);
 
 	for (x = 0; x < size; x++)
 	{
@@ -34,7 +34,7 @@ void print_python_list(PyObject *p)
 }
 
 /**
- * print_python_bytes - Function prints basic info abt Python byte objects
+ * print_python_bytes - Function prints basic info abt Python byte objects.
  * @p: This parameter is a PyObject byte object.
  *
  */
