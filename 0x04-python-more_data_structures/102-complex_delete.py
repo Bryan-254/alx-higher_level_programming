@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def complex_delete(a_dictionary, value):
-    # Create a copy of the dictionary 
+    # Create a copy of the dictionary
     # This is to avoid modifying the original during iteration
     deletedKeysDict = [key for key, val in a_dictionary.items() if val == value]
 
