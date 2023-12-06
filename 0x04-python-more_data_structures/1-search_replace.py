@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
     # Create a new list to store the modified elements
-    newList = []
+    newList = ""
 
     # Iterate through the elements in the original list
     for elmt in my_list:
