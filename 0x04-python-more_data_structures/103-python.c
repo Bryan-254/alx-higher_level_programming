@@ -33,7 +33,7 @@ void print_python_list(PyObject *p)
 
 /**
  * print_python_bytes - Prints some basic info about Python bytes
- * @p: Python byte object
+ * @p: Python byte object.
  */
 
 void print_python_bytes(PyObject *p)
