@@ -1,4 +1,8 @@
 #include <Python.h>
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <listobject.h>
 
 /**
  * print_python_list - Prints some basic info about Python list
