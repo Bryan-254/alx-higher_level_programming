@@ -5,7 +5,7 @@
 #include <listobject.h>
 
 /**
- * print_python_list - Prints some basic info about Python list
+ * print_python_list - Prints some basic info about Python list.
  * @p: Python list object
  */
 
@@ -42,7 +42,7 @@ void print_python_bytes(PyObject *p)
 
 	if (!PyBytes_Check(p))
 	{
-		fprintf(stderr, "Invalid Python bytes object\n");
+		fprintf(stderr, "[ERROR] Invalid Bytes Object\n");
 		return;
 	}
 
