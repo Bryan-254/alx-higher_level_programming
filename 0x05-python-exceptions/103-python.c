@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_python_float - This function gives data of the PyFloatObject
- * @p: This parameter is the PyObject
+ * print_python_float - This function gives data of the PyFloatObject.
+ * @p: This parameter is the PyObject.
  */
 
 void print_python_float(PyObject *p)
@@ -25,8 +25,8 @@ void print_python_float(PyObject *p)
 }
 
 /**
- * print_python_bytes - This function gives data of the PyBytesObject
- * @p: This parameter is the PyObject
+ * print_python_bytes - This function gives data of the PyBytesObject.
+ * @p: This parameter is the PyObject.
  */
 
 void print_python_bytes(PyObject *p)
@@ -55,8 +55,8 @@ void print_python_bytes(PyObject *p)
 }
 
 /**
- * print_python_list - This function gives data of the PyListObject
- * @p: This parameter is the PyObject
+ * print_python_list - This function gives data of the PyListObject.
+ * @p: This parameter is the PyObject.
  */
 
 void print_python_list(PyObject *p)
