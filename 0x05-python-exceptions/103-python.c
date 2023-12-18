@@ -1,9 +1,11 @@
 #include <Python.h>
 #include <stdio.h>
+
 /**
- * print_python_float - gives data of the PyFloatObject
- * @p: the PyObject
+ * print_python_float - This function gives data of the PyFloatObject
+ * @p: This parameter is the PyObject
  */
+
 void print_python_float(PyObject *p)
 {
 	double value = 0;
@@ -21,13 +23,15 @@ void print_python_float(PyObject *p)
 	string = PyOS_double_to_string(value, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
 	printf("  value: %s\n", string);
 }
+
 /**
- * print_python_bytes - gives data of the PyBytesObject
- * @p: the PyObject
+ * print_python_bytes - This function gives data of the PyBytesObject
+ * @p: This parameter is the PyObject
  */
+
 void print_python_bytes(PyObject *p)
 {
-	Py_ssize_t size = 0, i = 0;
+	Py_ssize_t size = 0, x = 0;
 	char *string = NULL;
 
 	fflush(stdout);
@@ -42,22 +46,24 @@ void print_python_bytes(PyObject *p)
 	string = (assert(PyBytes_Check(p)), (((PyBytesObject *)(p))->ob_sval));
 	printf("  trying string: %s\n", string);
 	printf("  first %zd bytes:", size < 10 ? size + 1 : 10);
-	while (i < size + 1 && i < 10)
+	while (x < size + 1 && x < 10)
 	{
-		printf(" %02hhx", string[i]);
-		i++;
+		printf(" %02hhx", string[x]);
+		x++;
 	}
 	printf("\n");
 }
+
 /**
- * print_python_list - gives data of the PyListObject
- * @p: the PyObject
+ * print_python_list - This function gives data of the PyListObject
+ * @p: This parameter is the PyObject
  */
+
 void print_python_list(PyObject *p)
 {
 	Py_ssize_t size = 0;
 	PyObject *item;
-	int i = 0;
+	int x = 0;
 
 	fflush(stdout);
 	printf("[*] Python list info\n");
@@ -66,15 +72,17 @@ void print_python_list(PyObject *p)
 		size = PyList_GET_SIZE(p);
 		printf("[*] Size of the Python List = %zd\n", size);
 		printf("[*] Allocated = %lu\n", ((PyListObject *)p)->allocated);
-		while (i < size)
+		while (x < size)
 		{
-			item = PyList_GET_ITEM(p, i);
-			printf("Element %d: %s\n", i, item->ob_type->tp_name);
+			item = PyList_GET_ITEM(p, x);
+			printf("Element %d: %s\n", x, item->ob_type->tp_name);
 			if (PyBytes_Check(item))
+			{
 				print_python_bytes(item);
+			}
 			else if (PyFloat_Check(item))
 				print_python_float(item);
-			i++;
+			x++;
 		}
 	}
 	else
