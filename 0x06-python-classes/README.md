@@ -140,7 +140,7 @@ Write a class Square that defines a square by: (based on 4-square.py)
 #advanced  
 Write the Python class MagicClass that does exactly the same as the following Python bytecode:  
 
-Disassembly of __init__:
+Disassembly of __init__:  
  10           0 LOAD_CONST               1 (0)
               3 LOAD_FAST                0 (self)
               6 STORE_ATTR               0 (_MagicClass__radius)
@@ -170,7 +170,7 @@ Disassembly of __init__:
              69 LOAD_CONST               3 (None)
              72 RETURN_VALUE
 
-Disassembly of area:
+Disassembly of area:  
  17           0 LOAD_FAST                0 (self)
               3 LOAD_ATTR                0 (_MagicClass__radius)
               6 LOAD_CONST               1 (2)
@@ -180,7 +180,7 @@ Disassembly of area:
              16 BINARY_MULTIPLY
              17 RETURN_VALUE
 
-Disassembly of circumference:
+Disassembly of circumference:  
  21           0 LOAD_CONST               1 (2)
               3 LOAD_GLOBAL              0 (math)
               6 LOAD_ATTR                1 (pi)
