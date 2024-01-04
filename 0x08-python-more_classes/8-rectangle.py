@@ -47,12 +47,14 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        return 0 if self.width == 0 or self.height == 0 else 2 * (self.width + self.height)
+        return 0 if self.width == 0 or self.height == 0 \
+                else 2 * (self.width + self.height)
 
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-        return ((str(self.print_symbol) * self.width + "\n") * self.height).strip()
+        return ((str(self.print_symbol) * self.width + "\n")
+                * self.height).strip()
 
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
