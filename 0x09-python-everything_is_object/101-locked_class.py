@@ -1,10 +1,15 @@
 #!/usr/bin/python3
 """
-Documentation for a class LockedClass with no class or object attribute
+Documentation for class LockedClass
+
 """
 
 
 class LockedClass:
+    """
+    A class LockedClass
+    """
+
     __slots__ = ['first_name']
 
     def __init__(self):
