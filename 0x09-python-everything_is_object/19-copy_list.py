@@ -4,8 +4,9 @@ Function that returns a copy of a list using slicing
 """
 
 
-def copy_list(l):
+def copy_list(original_list):
     """
     Return a shallow copy of the list
     """
-    return l[:]
+
+    return original_list[:]
