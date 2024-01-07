@@ -9,7 +9,7 @@ def print_square(size):
     If size is not an instance of int class, raise TypeError
     If size is less than zero, Raise ValueError
     If size is an instance of float and less than zero, raise TypeError
-    Print a square made of # characters.
+    Print a square made of # characters
     """
 
     if not isinstance(size, int):
