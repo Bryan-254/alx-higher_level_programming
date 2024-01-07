@@ -3,6 +3,7 @@
 function that prints My name is <first name> <last name>
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Check if first_name and last_name are strings
