@@ -9,15 +9,10 @@ def is_same_class(obj, a_class):
     Function that returns True if the object is exactly
     an instance of the specified class ; otherwise False.
 
-    The isinstance() function already returns a boolean value (True or False),
-    so you don't need to explicitly return True or False.
+    Function checks if the type of the given object (type(obj)) is
+    exactly equal to the specified class (a_class)
 
-    You can directly return the result of the isinstance() check.
+    If they are the same, it returns True; otherwise, it returns False.
     """
 
-    return isinstance(obj, a_class)
-
-a = 1
-
-if is_same_class(a, int):
-    print("{} is an instance of the class {}".format(a, int.__name__))
+    return type(obj) is a_class
