@@ -1,0 +1,24 @@
+Doctest for BaseGeometry class.
+
+>>> geometry = BaseGeometry()
+
+# Testing area() method, which should raise an Exception
+>>> geometry.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+# Testing integer_validator() method with a valid integer value
+>>> geometry.integer_validator("side_length", 5)
+
+# Testing integer_validator() method with a non-integer value
+>>> geometry.integer_validator("side_length", "not_an_integer")
+Traceback (most recent call last):
+    ...
+TypeError: not_an_integer must be an integer
+
+# Testing integer_validator() method with a non-positive integer value
+>>> geometry.integer_validator("side_length", 0)
+Traceback (most recent call last):
+    ...
+ValueError: 0 must be greater than 0
