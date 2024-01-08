@@ -6,10 +6,14 @@ This involves defining function to check if you can add attribute
 
 def add_attribute(obj, name, value):
     """
-    checks if can add atrribute
+    checks if can add atrribute.
 
     The function checks if the object has a __dict__ attribute,
     which indicates that it allows adding new attributes.
+
+    The presence of __dict__ in an object or class often indicates
+    that you can dynamically add or modify attributes at runtime.
+
     If the object allows it, the function uses setattr to add
     the attribute with the specified name and value.
     """
