@@ -6,11 +6,13 @@ Exact same object task
 
 def is_same_class(obj, a_class):
     """
-    function that returns True if the object is exactly
-    an instance of the specified class ; otherwise False
+    Function that returns True if the object is exactly
+    an instance of the specified class ; otherwise False.
+
+    The isinstance() function already returns a boolean value (True or False),
+    so you don't need to explicitly return True or False.
+
+    You can directly return the result of the isinstance() check.
     """
 
-    if isinstance(obj, a_class):
-        return True
-    if not isinstance(obj, a_class):
-        return False
+    return isinstance(obj, a_class)
