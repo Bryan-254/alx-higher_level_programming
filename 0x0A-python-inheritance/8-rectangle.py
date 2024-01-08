@@ -14,6 +14,7 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__height = height
 
+
 class Rectangle(BaseGeometry):
     """
     class for rectangle that inherits from BaseGeometry
