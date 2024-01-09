@@ -19,7 +19,7 @@ def read_file(filename=""):
     the file using the read() method and stores it in the variable 'content'.
 
     print(content): This line prints the content of the file
-    to the standard output (stdout). 
+    to the standard output (stdout).
     """
     try:
         with open(filename, 'r', encoding='utf-8') as file:
