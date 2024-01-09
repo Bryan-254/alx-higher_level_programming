@@ -6,20 +6,16 @@ Search and update task
 
 def append_after(filename="", search_string="", new_string=""):
     """
-    Open the file in read mode to retrieve its content.
-
-    Open the file in write mode to overwrite its content.
-    Iterate through each line in the original content.
-    Write the original line to the file.
-    Check if the search string is present in the line.
-    If found, append the new string after the line.
+    append_after function seems to be designed to open a file,
+    search for a specific string (search_string), and then append
+    a new string (new_string) after each occurrence of the search string.
     """
 
-    with open(filename, 'r') as file:
-        lines = file.readlines()
-
-    with open(filename, 'w') as file:
-        for line in lines:
-            file.write(line)
+    txt = ""
+    with open(filename) as r:
+        for line in r:
+            txt += line
             if search_string in line:
-                file.write(new_string + '\n')
+                txt += new_string
+    with open(filename, "w") as w:
+        w.write(txt)
