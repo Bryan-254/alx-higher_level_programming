@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Write to a file task
+Write to a file task.
 """
 
 
