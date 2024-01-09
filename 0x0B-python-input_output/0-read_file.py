@@ -15,14 +15,13 @@ def read_file(filename=""):
     file and automatically close it when the block of code
     inside the with statement is exited.
 
-    content = file.read(): This line reads the entire content of
-    the file using the read() method and stores it in the variable 'content'.
+    The line, print(file.read(), end=""), is responsible for reading
+    the content of the file opened with the with open statement and
+    printing it to the standard output.
 
-    print(content): This line prints the content of the file
-    to the standard output (stdout).
+    The end="" parameter ensures that there is no newline character (\n)
+    added at the end of the printed content.
     """
-    try:
-        with open(filename, 'r', encoding='utf-8') as file:
-            print(file.read(), end="")
-    except Exception as e:
-        print(f"Error reading file: {e}")
+
+    with open(filename, 'r', encoding='utf-8') as file:
+        print(file.read(), end="")
