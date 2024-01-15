@@ -86,3 +86,23 @@ class Base:
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns a list of instances.
+
+        The Base class now has a class method load_from_file that reads the
+        JSON string from the file <Class name>.json and returns a list of
+        instances created using the create method. If the file doesn't exist,
+        it returns an empty list.
+        """
+        file_name = cls.__name__ + ".json"
+
+        try:
+            with open(file_name, mode="r", encoding="utf-8") as file:
+                json_str = file.read()
+                dict_list = cls.from_json_string(json_str)
+                return [cls.create(**d) for d in dict_list]
+        except FileNotFoundError:
+            return []
