@@ -75,7 +75,7 @@ class Testsqr_w(unittest.TestCase):
 
     def test_s_str(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square("Edward", 10)
+            Square("Bryan", 10)
 
     def test_s_float(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
