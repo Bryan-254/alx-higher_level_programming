@@ -1,7 +1,9 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """
 Module for square
 """
+
+from .base import Base
 from models.rectangle import Rectangle
 
 
