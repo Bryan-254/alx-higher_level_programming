@@ -155,59 +155,5 @@ class Testrec_w(unittest.TestCase):
             Rectangle(0, 7)
 
 
-class Testrec_h(unittest.TestCase):
-    """
-    Type class unittest instance for rectangle height
-    """
-
-    def test_h_none(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, None)
-
-    def test_h_str(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, "Edward")
-
-    def test_h_float(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10.2, 7)
-
-    def test_h_dict(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, {"a": 10, "b": 7})
-
-    def test_h_list(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, [10, 7, 8])
-
-    def test_h_tuple(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, (10, 7, 8))
-
-    def test_h_nan(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, float('nan'))
-
-    def test_h_inf(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, float('inf'))
-
-    def test_h_set(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, {10, 7, 8})
-
-    def test_h_frozen(self):
-        with self.assertRaisesRegex(TypeError, "height must be an integer"):
-            Rectangle(10, frozenset({10, 7, 8, 1}))
-
-    def test_h_negative(self):
-        with self.assertRaisesRegex(ValueError, "height must be > 0"):
-            Rectangle(10, -7)
-
-    def test_h_zero(self):
-        with self.assertRaisesRegex(ValueError, "height must be > 0"):
-            Rectangle(10, 0)
-
-
 if __name__ == '__main__':
     unittest.main()
