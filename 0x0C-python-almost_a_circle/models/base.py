@@ -47,3 +47,42 @@ class Base:
             json_str = cls.to_json_string([obj.to_dictionary()
                                            for obj in list_objs])
             file.write(json_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the list of the JSON string representation json_string
+        """
+        if json_string is None or len(json_string) == 0:
+            json_string = []
+        else:
+            return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        returns an instance with all attributes already set
+        """
+        if cls.__name__ == "Rectangle":
+            """Creating a dummy Rectangle instance"""
+            dummy_instance = cls(1, 1)
+        elif cls.__name__ == "Square":
+            """Creating a dummy Square instance"""
+            dummy_instance = cls(1)
+
+        dummy_instance.update(**dictionary)
+        return dummy_instance
+
+    def update(self, *args, **kwargs):
+        """
+        Updates instance attributes with the values passed as
+        arguments or keyword arguments.
+        """
+        if args:
+            attrs = ["id", "width", "height", "size", "x", "y"]
+            for attr, value in zip(attrs, args):
+                setattr(self, attr, value)
+
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
