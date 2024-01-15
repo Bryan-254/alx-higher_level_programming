@@ -44,5 +44,6 @@ class TestSquare(unittest.TestCase):
         expected_dict = {'id': 1, 'size': 5, 'x': 2, 'y': 3}
         self.assertEqual(square_dict, expected_dict)
 
+
 if __name__ == '__main__':
     unittest.main()
