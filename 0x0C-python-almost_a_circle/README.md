@@ -61,7 +61,7 @@ Update the class Rectangle by adding the public method def display(self): that p
 
 6. __str__:  
 mandatory  
-Update the class Rectangle by overriding the __str__ method so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>  
+Update the class Rectangle by overriding the __str__ method so that it returns [Rectangle] (id) x/y - width/height  
 
 7. Display #1:  
 mandatory  
@@ -95,7 +95,7 @@ Write the class Square that inherits from Rectangle:
 -- Call the super class with id, x, y, width and height - this super call will use the logic of the __init__ of the Rectangle class. The width and height must be assigned to the value of size  
 -- You must not create new attributes for this class, use all attributes of Rectangle - As reminder: a Square is a Rectangle with the same width and height  
 -- All width, height, x and y validation must inherit from Rectangle - same behavior in case of wrong data  
-- The overloading __str__ method should return [Square] (<id>) <x>/<y> - <size> - in our case, width or height  
+- The overloading __str__ method should return [Square] (id) x/y - size - in our case, width or height  
 As you know, a Square is a special Rectangle, so it makes sense this class Square inherits from Rectangle. Now you have a Square class who has the same attributes and same methods.  
 
 11. Square size:  
@@ -148,7 +148,7 @@ mandatory
 Update the class Base by adding the class method def save_to_file(cls, list_objs): that writes the JSON string representation of list_objs to a file:  
 - list_objs is a list of instances who inherits of Base - example: list of Rectangle or list of Square instances  
 - If list_objs is None, save an empty list  
-- The filename must be: <Class name>.json - example: Rectangle.json  
+- The filename must be: {Class name}.json - example: Rectangle.json  
 - You must use the static method to_json_string (created before)  
 - You must overwrite the file if it already exists  
 
@@ -173,7 +173,7 @@ Update the class Base by adding the class method def create(cls, **dictionary): 
 19. File to instances:  
 mandatory  
 Update the class Base by adding the class method def load_from_file(cls): that returns a list of instances:  
-- The filename must be: <Class name>.json - example: Rectangle.json  
+- The filename must be: {Class name}.json - example: Rectangle.json  
 - If the file doesn’t exist, return an empty list  
 - Otherwise, return a list of instances - the type of these instances depends on cls (current class using this method)  
 - You must use the from_json_string and create methods (implemented previously)  
@@ -185,7 +185,7 @@ Update the class Base by adding the class methods def save_to_file_csv(cls, list
 - Has the same behavior as the JSON serialization/deserialization  
 - Format of the CSV:  
 -- Rectangle: {id},{width},{height},{x},{y}  
--- Square: "id,size,x,y"  
+-- Square: {id},{size},{x},{y}  
 
 21. Let's draw it:  
 #advanced  
