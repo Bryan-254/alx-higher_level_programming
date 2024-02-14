@@ -3,7 +3,7 @@
 -- creates a database if it doesn't exists
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
--- creates a user if it doesn't exists
+-- creates a user if it doesn't exists and sets password
 CREATE USER IF NOT EXISTS user_0d_2@localhost IDENTIFIED BY 'user_0d_2_pwd';
 
 -- grants SELECT privileges on hbtn_0d_2 database to user_0d_2
