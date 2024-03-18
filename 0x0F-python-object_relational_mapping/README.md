@@ -233,7 +233,7 @@ Write a script that lists all State objects, and corresponding City objects, con
 - Results must be displayed as they are in the example below  
 - Your code should not be executed when imported  
 
-``<state id>: <state name>``
+``<state id>: <state name>``  
 ``<tabulation><city id>: <city name>``
 
 No test cases needed  
