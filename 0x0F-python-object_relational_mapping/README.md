@@ -199,7 +199,7 @@ Next, write a script 14-model_city_fetch_by_state.py that prints all City object
 - You must import State and Base from model_state - from model_state import Base, State  
 - Your script should connect to a MySQL server running on localhost at port 3306  
 - Results must be sorted in ascending order by cities.id  
-- Results must be display as they are in the example below (<state name>: (<city id>) <city name>)  
+- Results must be display as they are in the example below ``(<state name>: (<city id>) <city name>)``  
 - Your code should not be executed when imported  
 No test cases needed  
 
@@ -233,8 +233,8 @@ Write a script that lists all State objects, and corresponding City objects, con
 - Results must be displayed as they are in the example below  
 - Your code should not be executed when imported  
 
-<state id>: <state name>
-<tabulation><city id>: <city name>
+``<state id>: <state name>``
+``<tabulation><city id>: <city name>``
 
 No test cases needed  
 
@@ -250,6 +250,6 @@ Write a script that lists all City objects from the database hbtn_0e_101_usa
 - Results must be displayed as they are in the example below  
 - Your code should not be executed when imported  
 
-<city id>: <city name> -> <state name>  
+```<city id>: <city name> -> <state name>```  
 
 No test cases needed  
