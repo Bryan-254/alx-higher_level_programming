@@ -1,26 +1,30 @@
 #!/usr/bin/python3
+"""
+Script that lists all states with a name starting with N
+from the database hbtn_0e_0_usa.
+"""
 
-"""Script that filter states by user input"""
-
-import MySQLdb
 import sys
-
+import MySQLdb
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    # Connect to MySQL server
+    db = MySQLdb.connect(host='localhost', port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
 
-    db = MySQLdb.connect(host="localhost", port=3306, user=username,
-                         passwd=password, db=database)
-    cursor = db.cursor()
-    cursor.execute(
-        "SELECT * FROM states WHERE name LIKE 'N%%' OR "
-        "name LIKE 'n%%' ORDER BY id ASC"
-    )
-    states = cursor.fetchall()
-    for state in states:
-        print(state)
+    # Create a cursor object
+    cur = db.cursor()
 
-    cursor.close()
+    # Execute the SQL query
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+
+    # Fetch all the results
+    rows = cur.fetchall()
+
+    # Print the results
+    for row in rows:
+        print(row)
+
+    # Close cursor and database
+    cur.close()
     db.close()
