@@ -24,7 +24,7 @@ if __name__ == "__main__":
     # Execute SQL query
     cursor.execute("SELECT * FROM states WHERE name='{}' \
                     ORDER BY id".format(state_name))
-    rows = cursor.fetchall()
+    rows = cursor.fetchone()
 
     # Display results
     for row in rows:
